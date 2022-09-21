@@ -1,21 +1,16 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MvcMovie.Models;
+using MvcMovie.Controllers;
 
 namespace MvcMovie.Controllers;
-
-public class HomeController : Controller
+public class StudentController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
-[HttpGet]
     public IActionResult Index()
     {
-         List<Student> stdList = new List<Student>()
+        //khoi toa list studen
+        List<Student> stdList = new List<Student>()
         {
             new Student {StudentID = 1, StudentName = "Nguyen Van A", StudentAge = 18},
             new Student {StudentID = 2, StudentName = "Nguyen Van B", StudentAge = 18},
@@ -26,17 +21,13 @@ public class HomeController : Controller
         ViewData["Students"] = stdList;
         return View();
     }
-[HttpPost]
-    public IActionResult Index(string FullName, string Email )
+    [HttpPost]
+    public IActionResult Create(Student std)
     {
-        ViewBag.name="Hello" + FullName + "-" + Email;
+        //string message = std.Student + "-";
+        //message += std.StudentName + "-";
+        //message += std.Age;
+        //ViewBag.TT = message;
         return View();
     }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
 }
-
