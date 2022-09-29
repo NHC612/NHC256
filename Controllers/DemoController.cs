@@ -9,6 +9,11 @@ namespace MvcMovie.Controllers
     {
         //khai báo class theo tên của đối tựng
         GiaiPhuongTrinh gpt = new GiaiPhuongTrinh();
+        StringProcess strPro = new StringProcess();
+        StringProcess1 src = new StringProcess1();
+        StringProcess2 std = new StringProcess2();
+
+         StringProcess3 abc = new StringProcess3();
         //tạo các action
         public IActionResult Index()
         {
@@ -36,6 +41,48 @@ namespace MvcMovie.Controllers
             string mess = gpt.GiaiPhuongTrinhBacHai(a, b, c);
             ViewBag.mess = mess;
             return View();
+        }
+        public IActionResult XuLyChuoi()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult XuLyChuoi(string strInput)
+        {
+            ViewBag.mess = strPro.RemoveRemainingWhiteSpace(strInput);
+            return View();
+        }
+
+        public IActionResult XuLyChuoi1()
+        {
+            return View(); 
+        }
+        [HttpPost]
+        public IActionResult XuLyChuoi1(string strInput)
+        {
+            ViewBag.mess = src.LowerToUpper(strInput);
+            return View(); 
+        }
+        public IActionResult VietThuong()
+        {
+            return View(); 
+        }
+        [HttpPost]
+        public IActionResult VietThuong(string strInput)
+        {
+            ViewBag.mess = std.UpperToLower(strInput);
+            return View(); 
+        }
+
+        public IActionResult VietHoaKyTuDau()
+        {
+            return View(); 
+        }
+        [HttpPost]
+        public IActionResult VietHoaKiTuDau(string strInput)
+        {
+            ViewBag.mess = abc.CapitalizeOneFirstCharacter(strInput);
+            return View(); 
         }
     }
 }
