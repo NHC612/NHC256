@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nitro\\source\\repos\\Nguyen Hoang Cam  BTH\\Nguyen Hoang Cam  BTH\\Nguyen Hoang Cam  BTH.csproj",
-      "projectName": "Nguyen Hoang Cam  BTH",
-      "projectPath": "C:\\Users\\Nitro\\source\\repos\\Nguyen Hoang Cam  BTH\\Nguyen Hoang Cam  BTH\\Nguyen Hoang Cam  BTH.csproj",
+      "projectUniqueName": "C:\\Users\\Nitro\\MvcMovie\\MvcMovie.csproj",
+      "projectName": "MvcMovie",
+      "projectPath": "C:\\Users\\Nitro\\MvcMovie\\MvcMovie.csproj",
       "packagesPath": "C:\\Users\\Nitro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nitro\\source\\repos\\Nguyen Hoang Cam  BTH\\Nguyen Hoang Cam  BTH\\obj\\",
+      "outputPath": "C:\\Users\\Nitro\\MvcMovie\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nitro\\AppData\\Roaming\\NuGet\\NuGet.Config",
